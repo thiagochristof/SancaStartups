@@ -27,24 +27,52 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 
+			function shuffleItems(container_selector, items_selector){
+				//shuffle only works on modern browsers
+				if (document.querySelectorAll == undefined) { return; }
+
+				// the element with the items to be shuffled
+				var container = document.querySelector(container_selector);
+
+				// the items
+				var items = document.querySelectorAll(items_selector);
+
+				//convert querySelector all result to an array
+				var old_items = [];
+				for (var i = items.length - 1; i >= 0; i--) {
+					old_items.push(items[i]);
+				};
+
+				//remove all elements
+				container.innerHTML = '';
+
+				//re-insert them in random order
+				while(old_items.length) {
+					container.appendChild(old_items.splice(Math.random() * old_items.length, 1)[0]);
+				}
+			}
+
+			function init(){
+				shuffleItems('.startups ul', '.startups a');
+			}
 		</script>
 	</head>
 	<body>
 		<div class="application">
 			<!-- main holder -->
 			<div class="main center">
-				
+
 				<!-- header -->
 				<div class="header">
 					<h1>Sanca <strong>Startups</strong></h1>
 				</div>
-				
+
 				<!-- intro -->
 				<div class="intro">
 					<h2>Listagem das <strong>startups de internet</strong> com base em <strong>São Carlos, SP</strong><br /> <span class="en">Startup companies based in São Carlos, Brazil</span></h2>
 					<a href="http://sancahub.com.br"><img class="by-sancahub" src="images/by-sancahub.png" width="442" height="98" alt="Sanca Hub" /></a>
 				</div>
-				
+
 				<!-- startups -->
 				<div class="startups cf">
 					<!-- Obrigado por respeitar o tamanho padronizado do logo! 230x120 px -->
@@ -73,7 +101,10 @@
 				<p>O website <em>sancastartups.com.br</em> é inspirado no <a href="http://nytm.org/made-in-nyc/">Made in NY</a> e é resultado de<br />múltiplas colaborações dos encontros conhecidos como <a href="http://sancahub.com.br">Sanca Hub</a>.</p>
 				<p><a href="https://github.com/thiagochristof/SancaStartups"><img src="images/logo-github.png" width="80" height="31" alt="github" /></a><br />O <a href="https://github.com/thiagochristof/SancaStartups">código-fonte</a> está publicado sob a <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
 			</div>
-			<!-- end footer -->	
+			<!-- end footer -->
 		</div>
+		<script type="text/javascript">
+		init();
+		</script>
 	</body>
 </html>
