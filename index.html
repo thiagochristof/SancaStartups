@@ -26,7 +26,6 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-
 		</script>
 	</head>
 	<body>
@@ -48,16 +47,17 @@
 				<!-- startups -->
 				<div class="startups cf">
 					<!-- Obrigado por respeitar o tamanho padronizado do logo! 230x120 px -->
-					<ul>
-						<a href="http://www.appdeck.com.br"><li><img src="logos/appdeck.png" width="230" height="120" /><br />Aplicativos web</li></a>
-						<a href="https://editado.com.br"><li><img src="logos/editado.png" width="230" height="120" /><br />Plataforma de publicação de websites</li></a>
-						<a href="https://ipostal.com.br"><li><img src="logos/ipostal.png" width="230" height="120" /><br />Envie um cartão impresso a partir do celular</li></a>
-						<a href="http://www.linkinsports.com"><li><img src="logos/linkinsports.png" width="230" height="120" /><br />Ferramenta de ajuda na escolha de esportes</li></a>
-						<a href="http://www.onburger.com"><li><img src="logos/onburger.png" width="230" height="120" /><br />Sistemas de delivery pela internet</li></a>
-						<a href="http://www.platso.com"><li><img src="logos/platso.png" width="230" height="120" /><br />Conectando pessoas, organizações e empresas</li></a>
-						<a href="http://www.sienaidea.com.br"><li><img src="logos/sienaidea.png" width="230" height="120" /><br />Softwares e sistemas</li></a>
-						<a href="http://www.telasocial.com"><li><img src="logos/telasocial.png" width="230" height="120" /><br />Inovação em sinalização interativa com padrões web</li></a>
-						<a href="http://www.tokenlab.com.br"><li><img src="logos/tokenlab.png" width="230" height="120" /><br />Aplicativos móveis sob medida</li></a>
+					<ul id='startup-list'>
+						<li><a href="http://www.appdeck.com.br"><img src="logos/appdeck.png" width="230" height="120" /><br />Aplicativos web</a></li>
+						<li><a href="https://editado.com.br"><img src="logos/editado.png" width="230" height="120" /><br />Plataforma de publicação de websites</a></li>
+						<li><a href="https://ipostal.com.br"><img src="logos/ipostal.png" width="230" height="120" /><br />Envie um cartão impresso a partir do celular</a></li>
+						<li><a href="http://www.linkinsports.com"><img src="logos/linkinsports.png" width="230" height="120" /><br />Conectando pessoas e esportes</a></li>
+						<li><a href="http://www.onburger.com"><img src="logos/onburger.png" width="230" height="120" /><br />Sistemas de delivery pela internet</a></li>
+						<li><a href="http://www.platso.com"><img src="logos/platso.png" width="230" height="120" /><br />Conectando pessoas, organizações e empresas</a></li>
+						<li><a href="http://www.sienaidea.com.br"><img src="logos/sienaidea.png" width="230" height="120" /><br />Softwares e sistemas</a></li>
+						<li><a href="http://www.telasocial.com"><img src="logos/telasocial.png" width="230" height="120" /><br />Inovação em sinalização interativa com padrões web</a></li>
+						<li><a href="http://www.tokenlab.com.br"><img src="logos/tokenlab.png" width="230" height="120" /><br />Aplicativos móveis sob medida</a></li>
+						<li><a href="http://www.hichina.com.br"><img src="logos/hichina.png" width="230" height="120" /><br />Aulas de mandarim online com professoras nativas</a></li>
 					</ul>
 				</div>
 				
@@ -73,7 +73,13 @@
 				<p>O website <em>sancastartups.com.br</em> é inspirado no <a href="http://nytm.org/made-in-nyc/">Made in NY</a> e é resultado de<br />múltiplas colaborações dos encontros conhecidos como <a href="http://sancahub.com.br">Sanca Hub</a>.</p>
 				<p><a href="https://github.com/thiagochristof/SancaStartups"><img src="images/logo-github.png" width="80" height="31" alt="github" /></a><br />O <a href="https://github.com/thiagochristof/SancaStartups">código-fonte</a> está publicado sob a <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
 			</div>
-			<!-- end footer -->	
+			<!-- end footer -->
+			<script type="text/javascript">
+			  // Embaralha lista de startups
+			  var ul = document.getElementById("startup-list");
+			  for (var i = ul.children.length; i >= 0; i--)
+			    ul.appendChild(ul.children[Math.random() * i | 0]);
+			</script>
 		</div>
 	</body>
 </html>

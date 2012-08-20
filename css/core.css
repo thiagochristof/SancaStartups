@@ -118,7 +118,7 @@ img {
 	list-style: none;
 }
 
-.startups li {
+.startups li a {
 	float: left;
 	width: 33%;
 	text-align: center;
@@ -127,6 +127,7 @@ img {
 	color: #777;
 	padding: 15px 0 25px 0;
 	border: 1px solid #eee;
+	text-decoration: none;
 }
 
 .join {
