@@ -9,10 +9,11 @@
 }
 
 body {
-	background-color: #fff;
 	font-family: Arial, sans-serif;
 	font-size: 12px;
 	color: #000;
+	background-color: #eee;
+	background-image: url(../images/bg.png); /* texture by Atle Mo http://subtlepatterns.com/retina-dust/ */
 }
 
 a, a:link, a:visited, a:hover, a:active {
@@ -59,59 +60,44 @@ img {
 }
 
 .header {
-	height: 112px;
-	background-color: #292929;
-	background-image: url(../images/bg-header.png);
+	background-color: #333;
+	background-image: url(../images/bg-header.png); /* texture by Tony Kinard http://subtlepatterns.com/iron-grip/ */
 	text-align: center;
+	position: relative;
+	height: 280px;
+	border-bottom: 1px solid #ccc;
 }
 
-.header h1 {
-	color: #d0d0d0;
-	font-family: 'Oswald', sans-serif;
-	font-weight: 300;
-	font-size: 56px;
-	padding: 15px 0 0 0;
-	text-transform: lowercase;
+.header .logo {
+	padding: 70px 0 27px 0;
+}
+
+.header h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #ddd;
+	line-height: 22px;
 }
 
 .header strong {
 	color: #fff;
-	font-weight: 300;
-}
-
-.intro {
-	height: 110px;
-	background-color: #36d5d5;
-	border-top: 1px solid #90e8e8;
-	text-align: center;
-	position: relative;
-}
-
-.intro h2 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	font-size: 24px;
-	padding: 28px 0 0 0;
-	color: #0d3e3e;
-}
-
-.intro strong {
 	font-weight: 600;
 }
 
-.intro .en {
-	font-size: 18px;
-	font-style: italic;
+.header .en {
+	font-size: 13px;
+	color: #999;
 }
 
-.intro .by-sancahub {
+.header .by-sancahub {
 	position: absolute;
-	right: 30px;
-	top: 62px;
+	right: 50px;
+	top: 155px;
 }
 
 .startups {
-	padding: 80px 0 30px 0;
+	padding: 0 0 30px 0;
 }
 
 .startups ul {
@@ -128,11 +114,13 @@ img {
 	padding: 15px 0 25px 0;
 	border: 1px solid #eee;
 	text-decoration: none;
+	background-color: #fff;
 }
 
 .join {
 	height: 110px;
 	background-color: #36d5d5;
+	border-top: 1px solid #90e8e8;
 	border-bottom: 1px solid #90e8e8;
 	text-align: center;
 }
@@ -153,7 +141,6 @@ img {
 	width: 100%;
 	text-align: center;
 	padding: 40px 0;
-	background-color: #eee;
 	border-top: 1px solid #efefef;
 }
 
