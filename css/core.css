@@ -1,16 +1,8 @@
-/* startups.css */
-/* ------------ */
+/* core.css */
 
-/* start minimum css framework */
-
-* { /* reset to avoid spacing issues */ 
-	margin: 0;
-	padding: 0;
-}
+/* Sanca Startups makes use of Bootstrap 3 (CDN) for responsiveness */
 
 body {
-	font-family: Arial, sans-serif;
-	font-size: 12px;
 	color: #000;
 	background-color: #eee;
 	background-image: url(../images/bg.png); /* texture by Atle Mo http://subtlepatterns.com/retina-dust/ */
@@ -18,66 +10,29 @@ body {
 
 a, a:link, a:visited, a:hover, a:active {
 	color: #000;
+	text-decoration: underline;
 }
-
-img {
-	border: 0;
-}
-
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
-.center {
-	margin-right: auto;
-	margin-left: auto;
-}
-
-.cf { /* clear floats to avoid scroll issues */
-	overflow: auto;
-}
-
-.column {
-	float: left;
-	height: auto;
-}
-
-/* end minimum css framework */
 
 /* layout & content */
-
-.application {
-	width: 100%;
-	min-width: 880px;
-}
-
-.main {
-	width: 100%;
-}
 
 .header {
 	background-color: #333;
 	background-image: url(../images/bg-header.png); /* texture by Tony Kinard http://subtlepatterns.com/iron-grip/ */
-	text-align: center;
-	position: relative;
-	height: 280px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #ccc; 
 }
 
 .header .logo {
-	padding: 70px 0 27px 0;
+	padding: 1.4em 0 .1em 0;
+	margin: 0 auto; /* center .img-responsive (bootstrap) image */
 }
 
 .header h2 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 1.142em;
 	color: #ddd;
-	line-height: 22px;
+	line-height: 1.2em;
+	margin-bottom: 4em;
 }
 
 .header strong {
@@ -86,50 +41,48 @@ img {
 }
 
 .header .en {
-	font-size: 13px;
+	font-size: .928em;
 	color: #999;
 }
 
 .header .by-sancahub {
-	position: absolute;
-	right: 50px;
-	top: 155px;
+	margin: 10em 3em 0 auto;
 }
 
 .startups {
-	padding: 0 0 30px 0;
+	padding: .4em 0 2.142em 0;
 }
 
 .startups ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .startups li a {
 	float: left;
-	width: 33%;
+	width: 100%;
 	text-align: center;
 	font-family: Helvetica;
-	font-size: 13px;
-	color: #777;
-	padding: 15px 0 25px 0;
+	font-size: .928em;
+	color: #444;
+	padding: 1.071em 0 1.785em 0;
 	border: 1px solid #eee;
 	text-decoration: none;
 	background-color: #fff;
 }
 
 .join {
-	height: 110px;
 	background-color: #36d5d5;
 	border-top: 1px solid #90e8e8;
 	border-bottom: 1px solid #90e8e8;
-	text-align: center;
 }
 
 .join p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	font-size: 22px;
-	padding: 39px 0 0 0;
+	font-size: 1.571em;
+	padding: 1.6em 0 1.3em 0;
 	color: #0d3e3e;
 }
 
@@ -138,15 +91,28 @@ img {
 }
 
 .footer {
-	width: 100%;
-	text-align: center;
-	padding: 40px 0;
+	padding: 2.85em 0 2.2em 0;
 	border-top: 1px solid #efefef;
 }
 
 .footer p {
-	font-size: 12px;
-	line-height: 20px;
+	font-size: .857em;
+	line-height: 1.428em;
 	color: #555;
-	padding-bottom: 15px;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+
+	.startups li a {
+		width: 50%; 
+	}
+}
+
+@media (min-width: 992px) {
+
+	.startups li a {
+		width: 33.333%; 
+	}
 }
